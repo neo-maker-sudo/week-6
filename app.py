@@ -11,7 +11,8 @@ app.config['SECRET_KEY'] = os.urandom(24)
 app.config['PERMENENT_SESSION_LIFETIME'] = timedelta(days=1)
 
 # database
-app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://neo:neoneo@localhost:3306/website"
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///test.db"
+# mysql+pymysql://neo:neoneo@localhost:3306/website
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 ## model for flask_sqlalchemy
