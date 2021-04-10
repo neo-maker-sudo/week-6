@@ -12,7 +12,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: Install
       run: |
-        pip install flask && flask_sqlalchemy
+        pip install flask 
+        pip install flask_sqlalchemy
         pip install pytest
     - name: Test
       run: python -m pytest test.py -vv
