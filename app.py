@@ -38,7 +38,7 @@ def signup():
     password = request.form['password']
     query = User.query.filter_by(username=username).first()
     if query:
-        return redirect(url_for('error', message=username,name=name))
+        return redirect(url_for('error', message=username, name=name))
     else:
         new_user = User(name,username,password)
         db.session.add(new_user)
@@ -56,7 +56,7 @@ def signin():
         return redirect(url_for('member'))
     else:
         return redirect(url_for('error', message=username))
-    
+
 @app.route('/signout', methods=['GET'])
 def signout():
     session['name'] = False
